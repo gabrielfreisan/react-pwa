@@ -12,23 +12,33 @@ const Column = (props) => {
             {title}
           </p>
         </header>
+
         <div className="card-content">
           <div className="content">
             {description}
             {' '}
-            {!!link.length && (
-              <a
-                href={link}
-                target="_blank"
-                rel="noreferrer noopener nofollow"
-              >
-                Read more
-              </a>
-            )}
+            <img alt="Cat &amp; Dog Sleeping" src="/images/b9f2b9df2b8119da0f1285eb19516818-dog-cat.jpg"></img>
           </div>
         </div>
       </div>
+
+      <div className="card-content">
+                  <div className="content">
+                  {link}
+                  {''}
+                  {!!link.length && (
+                    <button className="button is-link" href={link} target="_blank"
+                rel="noreferrer noopener nofollow" >Ver na loja</button>
+
+
+            )}
+
+                  </div>
+                </div>
     </div>
+
+
+
   );
 };
 Column.propTypes = {
@@ -39,30 +49,18 @@ Column.propTypes = {
 
 export default () => (
   <GuestLayout>
-    <section className="hero is-medium is-info is-bold">
-      <div className="hero-body">
-        <div className="container">
-          <h1 className="title">
-            Features
-          </h1>
-          <h2 className="subtitle">
-            There are no limits for creativity
-          </h2>
-        </div>
-      </div>
-    </section>
+
     <section className="m-t-lg">
       <div className="container p-l-md p-r-md">
         <h4 className="title is-4">
-          ReactPWA is configurable to the core.
-          You can add plugins as you like to extend the features or
-          you can use a bare minimum to start from scratch.
+         Clubcupons
         </h4>
         <div className="columns">
           <Column
-            title="Babel 7"
-            description="Already packed with the latest babel to achieve great performance and lower bundle size."
+            title="30% off"
+            description="Válido até..."
             link="https://babeljs.io/blog/2018/08/27/7.0.0"
+
           />
           <Column
             title="Webpack 4"
